@@ -1,0 +1,7 @@
+CENTOS SERVER2 WITH ADVANCE  INSTANCE TIER
+#!/bin/bash
+mkdir /tmp/ssm
+curl https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm -o /tmp/ssm/amazon-ssm-agent.rpm
+sudo yum install -y /tmp/ssm/amazon-ssm-agent.rpm
+sudo systemctl stop amazon-ssm-agent
+sudo systemctl start amazon-ssm-agen

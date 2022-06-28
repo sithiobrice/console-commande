@@ -1,0 +1,14 @@
+JJTECH FLIX PAGE
+#!/bin/bash
+
+sudo yum install httpd -y
+cd /var/www/html/
+sudo yum install wget -y
+sudo wget https://real-world-projects.s3.amazonaws.com/jjtech-streaming-application/jjtech-streaming-application-v1/jjtech-streaming-application-v1.zip
+sudo yum install unzip -y
+sudo unzip jjtech-streaming-application-v1.zip
+sudo cp -rf jjtech-streaming-application-v1/* .
+sudo rm -rf jjtech-streaming-application-v1.zp __MACOSX/
+sudo service httpd start
+sudo systemctl enable httpd
+sudo systemctl status httpd

@@ -1,0 +1,63 @@
+sudo apt update -y
+sudo apt install -y ansible
+sudo apt install python-is-python3
+sudo apt-get install python3-pip -y
+sudo pip3 install boto
+sudo pip3 install boto3
+ansible-galaxy collection install amazon.aws
+vi aws_ec2.yaml
+sudo vi /etc/ansible/ansible.cfg
+
+# Goto /etc/ansible/ansible.cfg, here everything is commented so uncomment “sudo_user” and "host_key_checking"
+sudo vi /etc/ansible/ansible.cfg and uncomment
+
+ansible-inventory -i aws_ec2.yaml --list
+
+vi avi-jes-oregon.pem
+
+chmod 400 avi-jes-oregon.pem
+
+ansible aws_ec2 -i aws_ec2.yaml -m ping --private-key=avi-jes-oregon.pem --user ec2-user
+
+ansible aws_ec2 -i aws_ec2.yaml -m yum -a 'name=git state=present' --private-key=avi-jes-oregon.pem --become --user ec2-user
+
+vi test-playbook.yaml
+
+
+
+---
+- name: sample playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: install httpd
+      yum:
+          name: httpd
+          state: latest
+
+    - name: run httpd
+      service:
+              name: httpd
+              state: started
+
+    - name: create content
+      copy:
+          content: "GM! Hello from JJTech"
+          dest: /var/www/html/index.html
+
+
+
+ansible-playbook -i aws_ec2.yaml -l aws_ec2 test-playbook.yaml --private-key=avi-jes-oregon.pem --user ec2-user
+
+
+
+
+
+
+
+plugin: aws_ec2
+regions:
+  - us-west-2
+filters:
+  tag:Env:
+    - dev

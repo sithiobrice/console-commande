@@ -1,0 +1,58 @@
+sudo dnf update
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+
+sudo dnf install ansible -y
+
+sudo yum install wget -y
+
+wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-latest.tar.gz
+
+tar xvzf ansible-tower-setup-latest.tar.gz
+
+ clear
+
+ ls
+
+ cd ansible-tower-setup-<tower_version>
+
+sudo vi inventory
+
+:set nu
+
+#once you safe your file do ls
+
+sudo -i
+pwd
+ls
+exit
+
+ANSIBLE_BECOME=true ./setup.sh
+
+
+https://www.redhat.com/wapps/ugc/register.html
+
+https://access.redhat.com/management/subscriptions
+
+https://www.redhat.com/en/technologies/management/ansible/try-it
+
+git clone https://github.com/tantuch19/JJTech-Bliss-Ansible-Tower.git
+
+cd Desktop/
+ mkdir GithubSrc
+ cd GithubSrc/
+ ls
+ git clone git@github.com:EDN2020/JJTech-Tower.git
+git clone https://github.com/tantuch19/JJTech-Bliss-Ansible-Tower.git
+ls ( you should now have two repository)
+cd JJTech-Tower
+pwd
+/c/Users/daniel.edie/Desktop/GithubSrc/JJTech-Tower
+cd .. ( this should take you back into GithubSrc)
+cd JJTech-Bliss-Ansible-Tower
+cp * /c/Users/daniel.edie/Desktop/GithubSrc/JJTech-Tower
+cd ../JJTech-Tower
+git status
+git add .
+git commit –m "commit message"
+git push
+Github-Repo

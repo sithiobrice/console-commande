@@ -1,0 +1,15 @@
+user name: JJTECHsource
+password:jjtech2022$
+ initial database name: JJtechSourcedb
+
+# link for file
+
+ https://bit.ly/JJTechSampleMYSQLDB
+
+  # mysql workbench
+  connection name:Source DB Connection
+   subnet-group name:jjtechDMSSubnetGrp
+
+ replication instance name:Migration Immersion Day - Rep Inst
+
+ Descriptive Amazon Resource Name (ARN):MigrationImmersionDay-RepIns

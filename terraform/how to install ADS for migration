@@ -1,0 +1,23 @@
+
+# the first Command
+
+curl -o ./aws-discovery-agent.tar.gz https://s3-us-west-2.amazonaws.com/aws-discovery-agent.us-west-
+2/linux/latest/aws-discovery-agent.tar.gz
+
+
+# the 2nd Command
+
+tar -xzf aws-discovery-agent.tar.gz
+
+
+# the 3rd Command for this you have to change your access key (-k) and your secret access key (-s)
+
+sudo bash install -r us-west-2 -k AKIAWYLCF54HIUGI7MUX -s
+xf7vEK+Z6EAikivCaSVUhZF4Vim+klFqZUDFbZTC
+
+
+
+
+# cloud adoption readiness lools link
+
+https://cloudreadiness.amazonaws.com/#/cart

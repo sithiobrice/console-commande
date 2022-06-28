@@ -1,0 +1,13 @@
+ARN FOR AWS ORGANISATION
+
+arn:aws:ec2:*:*:instance/*
+
+
+
+VOLUME FOR AWS ORGANISATION
+
+arn:aws:ec2:*:*:volume/*
+
+CONDITION KEY
+
+aws:RequestTag

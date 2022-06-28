@@ -1,0 +1,3 @@
+# when your cli time out run this cmd
+
+ssh -o ServerAliveCountMax

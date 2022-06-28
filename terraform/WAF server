@@ -1,0 +1,28 @@
+server1
+
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<html><body><h1>Hello AZ1</h1></body></html>" > /var/www/html/index.html
+
+
+server2
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<html><body><h1>Hello AZ2</h1></body></html>" > /var/www/html/index.html
+
+
+path for healthcheck
+
+/index.html
+
+MY IP
+
+73.135.170.148/32

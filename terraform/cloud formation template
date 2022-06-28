@@ -1,0 +1,9 @@
+Ec2instanceScheduler
+Started-by=Instance_Scheduler
+Stopped-by=Instance_Scheduler
+
+https://aws.amazon.com/solutions/implementations/instance-scheduler/
+
+partition key:us-office-hours
+
+ timezone:America/New_York

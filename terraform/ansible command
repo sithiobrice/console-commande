@@ -1,0 +1,39 @@
+sudo vi /etc/ssh/sshd_config
+
+sudo service sshd restart
+
+#PasswordAuthentication
+
+PasswordAuthentication
+
+:/PermitRootLogin
+
+ansible ALL=(ALL)       NOPASSWD:ALL
+
+vi /etc/sudoers
+
+sudo yum install epel-release
+
+sudo yum install ansible
+
+sudo vi /etc/ansible/hosts
+
+ssh ansible@your public ip adress
+
+ssh-keygen -t rsa
+
+chmod 700 /home/ansible/.ssh
+
+ssh-copy-id ansible@ip address of you ansible-node1
+ssh-copy-id ansible@ip address of you ansible-node2
+
+sudo vi /etc/ssh/sshd_config
+
+ansible webservers -m ping
+
+
+:/PasswordAuthentication
+PasswordAuthentication yes
+:/PermitRootLogin
+PermitRootLogin yes
+:wq!

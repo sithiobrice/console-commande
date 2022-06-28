@@ -1,0 +1,4 @@
+Create a Service Role For EC2 and Attach the bellow policies
+--> SSM Full Access
+--> S3 Full Access
+--> SNS Full Access
